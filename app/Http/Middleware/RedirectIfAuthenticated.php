@@ -19,6 +19,8 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             return redirect('/home');
+        }else{
+            return \redirect('/admin')->with('pesan_flash_error', 'Anda Harus Login Dulu!'); 
         }
 
         return $next($request);

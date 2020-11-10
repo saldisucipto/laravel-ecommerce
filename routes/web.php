@@ -24,5 +24,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::match(['get', 'post'], '/admin', 'AdminController@index');
 
-Route::get('/dashboard', 'AdminController@home');
-Route::post('/logoutdash', 'AdminController@logout');
+
+// Protected route with groupmidelwware
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/dashboard', 'AdminController@home');
+    Route::post('/logoutdash', 'AdminController@logout');
+    
+});

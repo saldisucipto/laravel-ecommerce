@@ -59,7 +59,7 @@
                 @endif
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img id="logo-login" src="{{asset('images/logo.png')}}" alt="logo" /></span>
+                        <span class="db"><img id="logo-login" src="{{asset('images/logo-white.png')}}" alt="logo" /></span>
                     </div>
                     <!-- Form -->
                     <form class="form-horizontal m-t-20" method="POST" id="loginform" action="{{url('admin')}}">
