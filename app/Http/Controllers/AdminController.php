@@ -34,6 +34,11 @@ class AdminController extends Controller
         return view('backend.home.index');
     }
 
+    // User Profile Setting 
+    public function accountSettings(){
+        return \view('backend.profile.index');
+    }
+
     // logout 
     public function logout(Request $request){
         $request->session()->flush();

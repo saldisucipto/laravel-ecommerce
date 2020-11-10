@@ -5,3 +5,10 @@
 #logo-nav {
     max-width: 250px;
 }
+
+#profile-picture {
+    max-height: 200px;
+    display: flex;
+    margin: 0 auto;
+    filter: drop-shadow(2px 2px 2px #222);
+}

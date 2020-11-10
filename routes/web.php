@@ -30,5 +30,5 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/dashboard', 'AdminController@home');
     Route::post('/logoutdash', 'AdminController@logout');
-    
+    Route::match(['get', 'put'], '/user/settings', 'AdminController@accountSettings');
 });
